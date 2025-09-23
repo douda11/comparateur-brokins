@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brokins - Extracteur de Contrat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">brokins</div>
+        <nav>
+            <a href="{{ url_for('index') }}">Accueil</a>
+            <a href="#">Nos assurances</a>
+            <a href="#">Pourquoi Brokins ?</a>
+            <a href="#">Blog</a>
+            <a href="#">Recrutement</a>
+            <a href="#">Contactez-nous</a>
+            <a href="#" class="devis-btn">Devis</a>
+        </nav>
+    </header>
+    <div class="banner"></div>
+    <main>
+        <h1>Extraire les données d'un contrat</h1>
+        <form id="extract-form" action="/extract" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Extraction de données</legend>
+                <div class="file-container">
+                    <label for="pdf_file">Fichier PDF du contrat :</label>
+                    <input type="file" id="pdf_file" name="pdf_file" accept="application/pdf" required>
+                </div>
+                <div class="input-container">
+                    <label for="level_name">Niveau de contrat :</label>
+                    <input type="text" id="level_name" name="level_name" placeholder="ex: Niveau 1" required>
+                </div>
+            </fieldset>
+            <button type="submit">Extraire</button>
+        </form>
+        <div id="results-container">
+            <h2>Résultat de l'extraction :</h2>
+            <pre id="results"></pre>
+        </div>
+    </main>
+    <script>
+        document.getElementById('extract-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = new FormData();
+            formData.append('pdf_file', document.getElementById('pdf_file').files[0]);
+            formData.append('level_name', document.getElementById('level_name').value);
+            
+            const resultsEl = document.getElementById('results');
+            resultsEl.textContent = 'Extraction en cours...';
+
+            try {
+                const response = await fetch('/extract', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `Erreur HTTP: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // Pretty print the JSON
+                resultsEl.textContent = JSON.stringify(data, null, 2);
+
+            } catch (error) {
+                resultsEl.textContent = `Erreur: ${error.message}`;
+                console.error("Erreur lors de l'extraction:", error);
+            }
+        });
+    </script>
+</body>
+</html> 

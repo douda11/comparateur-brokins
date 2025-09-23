@@ -1,0 +1,7 @@
+flask[async]
+flask-session 
+google-generativeai 
+markdown
+flask_cors
+nest_asyncio
+python-dotenv

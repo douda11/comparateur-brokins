@@ -1,0 +1,78 @@
+[
+    { 
+      "insurer": "AÉSIO",
+      "contract_name": "TNS Pro",
+      "contract_type": "Complémentaire santé",
+      "level_id": "tns_pro_niv1",
+      "level_name": "Niveau 1",
+      "benefits": {
+        "HOSPITALISATION": {
+          "honoraires_chirurgien_optam": "125 % BR",
+          "chambre_particuliere": "30 €"
+        },
+        "SOINS_COURANTS": {
+          "consultation_generaliste_optam": "100 % BR"
+        },
+        "DENTAIRE": {
+          "soins_dentaires": "125 % BR",
+          "implantologie": "100 €",
+          "orthodontie": "150 % BR"
+        },
+        "OPTIQUE": {
+          "verres_complexes": "100 €"
+        }
+      },
+      "source": {
+        "pdf_name": "1.1 Garanties TNS Pro.pdf",
+        "page_range": "all"
+      }
+    },
+    {
+        "insurer": "Alptis",
+        "contract_name": "Santé Pro+ Surco",
+        "contract_type": "Surcomplémentaire santé",
+        "level_id": "alptis_sante_pro_surco_lvl6",
+        "level_name": "Niveau 6",
+        "benefits": {
+          "HOSPITALISATION": {
+            "honoraires_chirurgien_optam": "500 % BRSS"
+          },
+          "SOINS_COURANTS": {
+            "consultation_generaliste_optam": "400 % BRSS"
+          },
+          "DENTAIRE": {},
+          "OPTIQUE": {}
+        },
+        "source": {
+          "pdf_name": "alptis (1).pdf",
+          "page_range": "3"
+        }
+      },
+      {
+        "insurer": "APRIL",
+        "contract_name": "Surcomplémentaire Pro Solution",
+        "contract_type": "Surcomplémentaire santé",
+        "level_id": "surco_pro_solution_renfort2",
+        "level_name": "Renfort 2 (Formules 4 et 5)",
+        "benefits": {
+          "HOSPITALISATION": {
+            "honoraires_chirurgien_optam": "+100% BR",
+            "chambre_particuliere": "+30 €"
+          },
+          "SOINS_COURANTS": {
+            "consultation_generaliste_optam": "+100% BR"
+          },
+          "DENTAIRE": {
+            "soins_dentaires": "+150 €",
+            "orthodontie": "+150 €"
+          },
+          "OPTIQUE": {
+            "verres_complexes": "+100 €"
+          }
+        },
+        "source": {
+          "pdf_name": "april (3).pdf",
+          "page_range": "6-7"
+        }
+      }
+]
