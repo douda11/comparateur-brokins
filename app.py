@@ -128,6 +128,22 @@ def compare_contracts():
 
     return jsonify({"table": top_contracts_md})
 
+@app.route('/api/contracts', methods=['GET'])
+def get_contracts():
+    """Retourne le fichier contracts.json pour le frontend"""
+    try:
+        contracts_path = os.path.join(os.path.dirname(__file__), 'contracts.json')
+        with open(contracts_path, 'r', encoding='utf-8') as f:
+            contracts = json.load(f)
+        print(f"✅ Contracts.json servi avec succès: {len(contracts)} contrats")
+        return jsonify(contracts), 200
+    except FileNotFoundError:
+        print("❌ Erreur: contracts.json non trouvé")
+        return jsonify({"error": "contracts.json not found"}), 404
+    except Exception as e:
+        print(f"❌ Erreur lors du chargement de contracts.json: {e}")
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/api/contracts/delete/<level_id>', methods=['DELETE'])
 def delete_contract_endpoint(level_id):
     success, message = delete_contract.delete_contract_by_id(level_id)

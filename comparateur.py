@@ -45,13 +45,42 @@ Besoins de l'utilisateur :
 Contrats disponibles :
 {json.dumps(contracts, indent=2, ensure_ascii=False)}
 
-**Instructions spécifiques de sélection :**
+**Instructions spécifiques de sélection avec logique de classement précise :**
 
-1. Pour les **3 premiers contrats**, vous devez impérativement privilégier ceux qui **couvrent intégralement l'ensemble des besoins exprimés par l'utilisateur**.
-2. Pour les **7 contrats suivants**, sélectionnez ceux qui **se rapprochent le plus des besoins**, même s'ils ne les couvrent pas entièrement.
-3. Classez l'ensemble des 10 contrats dans l'ordre décroissant de pertinence, en commençant par le plus adapté.
+**RANG 1 (Premier contrat) :**
+- Doit être **presque identique** aux besoins utilisateur
+- Garanties **exactement similaires** ou **très proches** (écart maximum ±10%)
+- Correspondance de **95-100%**
 
-Votre mission est d'identifier les **10 contrats les plus pertinents** et de les présenter sous forme de **tableau Markdown**, selon le format suivant :
+**RANGS 2-3 (Deuxième et troisième contrats) :**
+- Garanties dans une **marge acceptable** de **±50** par rapport aux besoins
+- Exemple : si besoin 300%, accepter 250% à 350%
+- Si besoin 200€, accepter 150€ à 250€
+- Correspondance de **85-94%**
+
+**RANGS 4-6 (Quatrième, cinquième et sixième contrats) :**
+- Doivent **couvrir intégralement tous les besoins** exprimés par l'utilisateur
+- Peuvent dépasser les besoins mais ne doivent pas être en dessous
+- Correspondance de **75-84%**
+
+**RANGS 7-10 (Septième à dixième contrats) :**
+- Les plus **éloignés** des besoins mais restant pertinents
+- Peuvent avoir des **manques significatifs** ou des **écarts importants**
+- Se rapprochent le plus des besoins parmi les contrats restants
+- Correspondance de **50-74%**
+
+**Critères d'évaluation pour le calcul du pourcentage :**
+- **Proximité exacte des garanties** (50% du score) - Chaque garantie est évaluée individuellement :
+  * Identique ou ±5% = Vert foncé (score max)
+  * ±5-20% = Vert standard
+  * ±20-50% = Vert clair  
+  * ±50-100% = Orange clair
+  * ±100-200% = Orange foncé
+  * >200% ou absence = Rouge
+- **Couverture complète des besoins** (30% du score)
+- **Cohérence globale du contrat** (20% du score)
+
+Votre mission est d'identifier les **10 contrats les plus pertinents** selon cette logique précise et de les présenter sous forme de **tableau Markdown**, selon le format suivant :
 
 | Contrat | Pourcentage de correspondance | Points forts | Points faibles |
 |--------|-------------------------------|--------------|----------------|
@@ -59,9 +88,11 @@ Votre mission est d'identifier les **10 contrats les plus pertinents** et de les
 Pour chaque contrat sélectionné, vous devez :
 
 1. Indiquer **le nom exact du contrat**.
-2. Fournir un **"Pourcentage de correspondance"** (de 0 % à 100 %) qui reflète **l'adéquation globale** entre le contrat et les besoins exprimés.
+2. Fournir un **"Pourcentage de correspondance"** (de 50% à 100%) qui reflète **l'adéquation globale** selon la logique de classement ci-dessus.
 3. Lister précisément les **"Points forts"** : les garanties qui **répondent ou surpassent les attentes** de l'utilisateur.
 4. Identifier clairement les **"Points faibles"** : les garanties **insuffisantes, absentes ou inadaptées** par rapport aux besoins.
+
+⚠️ **IMPORTANT :** Respectez impérativement la logique de classement définie ci-dessus. Le rang 1 doit être quasi-parfait, les rangs 2-3 dans la marge ±50, les rangs 4-6 couvrent tout, les rangs 7-10 sont les plus éloignés.
 
 ⚠️ Veuillez **retourner uniquement le tableau Markdown**, sans texte, commentaire ou formatage supplémentaire.
 

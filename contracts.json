@@ -971,7 +971,7 @@
       "contract_type": "Complémentaire santé",
       "level_id": "mcci_proevidence2_niv4",
       "level_name": "Flexibilité",
-      "benefits": {
+      "benefits": { 
         "HOSPITALISATION": {
           "honoraires_chirurgien_optam": "225% BR",
           "honoraires_chirurgien_non_optam": "200% BR",
