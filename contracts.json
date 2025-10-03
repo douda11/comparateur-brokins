@@ -2216,57 +2216,58 @@
         "page_range": "entire"
       }
     },
+    
     {
       "insurer": "Entoria",
-      "contract_name": "Confort Pro",
-      "contract_type": "Surcomplémentaire santé",
-      "level_id": "entoria_confort_pro",
-      "level_name": "Confort Pro",
+      "contract_name": "Sécurité Pro",
+      "contract_type": "Complémentaire santé",
+      "level_id": "entoria_securite_pro_complementaire",
+      "level_name": "Sécurité Pro",
       "benefits": {
         "HOSPITALISATION": {
-          "honoraires_chirurgien_optam": "+100% BR",
-          "honoraires_chirurgien_non_optam": "+100% BR",
-          "chambre_particuliere": "+20 € / jour, max 10 jours"
+          "honoraires_chirurgien_optam": "200% BR",
+          "honoraires_chirurgien_non_optam": "180% BR",
+          "chambre_particuliere": "80 €"
         },
         "SOINS_COURANTS": {
-          "consultation_generaliste_optam": "+100% BR",
-          "consultation_generaliste_non_optam": "+50% BR"
+          "consultation_generaliste_optam": "200% BR",
+          "consultation_generaliste_non_optam": "180% BR"
         },
         "DENTAIRE": {
-          "soins_dentaires": "+200% BR",
-          "orthodontie": "+200% BR"
+          "soins_dentaires": "200% BR",
+          "orthodontie": "250% BR"
         },
         "OPTIQUE": {
-          "verres_complexes": "+100 € / an"
+          "verres_complexes": "450 €"
         }
       },
       "source": {
-        "pdf_name": "entoria (3).pdf",
+        "pdf_name": "entoria (7).pdf",
         "page_range": "entire"
       }
     },
     {
       "insurer": "Entoria",
-      "contract_name": "Sécurité Pro",
+      "contract_name": "Sécurité Pro Surco",
       "contract_type": "Surcomplémentaire santé",
       "level_id": "entoria_securite_pro",
       "level_name": "Sécurité Pro",
       "benefits": {
         "HOSPITALISATION": {
-          "honoraires_chirurgien_optam": "+100% BR",
-          "honoraires_chirurgien_non_optam": "+100% BR",
-          "chambre_particuliere": "+10 € / jour, max 10 jours"
+          "honoraires_chirurgien_optam": "300% BR",
+          "honoraires_chirurgien_non_optam": "280% BR",
+          "chambre_particuliere": "90 € (max 10 jours)"
         },
         "SOINS_COURANTS": {
-          "consultation_generaliste_optam": "+100% BR",
-          "consultation_generaliste_non_optam": "+20% BR"
+          "consultation_generaliste_optam": "300% BR",
+          "consultation_generaliste_non_optam": "200% BR"
         },
         "DENTAIRE": {
-          "soins_dentaires": "+100% BR",
-          "orthodontie": "+100% BR"
+          "soins_dentaires": "300% BR",
+          "orthodontie": "350% BR"
         },
         "OPTIQUE": {
-          "verres_complexes": "+100 € / an"
+          "verres_complexes": "755 €"
         }
       },
       "source": {
@@ -2324,7 +2325,7 @@
           "orthodontie": "350% BR"
         },
         "OPTIQUE": {
-          "verres_complexes": "Deux verres très complexes + monture : 610 €"
+          "verres_complexes": "610 €"
         }
       },
       "source": {
@@ -2334,30 +2335,30 @@
     },
     {
       "insurer": "Entoria",
-      "contract_name": "Sécurité Pro",
-      "contract_type": "Complémentaire santé",
-      "level_id": "entoria_securite_pro_complementaire",
-      "level_name": "Sécurité Pro",
+      "contract_name": "Confort Pro Surco",
+      "contract_type": "Surcomplémentaire santé",
+      "level_id": "entoria_confort_pro",
+      "level_name": "Confort Pro",
       "benefits": {
         "HOSPITALISATION": {
-          "honoraires_chirurgien_optam": "200% BR",
-          "honoraires_chirurgien_non_optam": "180% BR",
-          "chambre_particuliere": "80 €"
+          "honoraires_chirurgien_optam": "400% BR",
+          "honoraires_chirurgien_non_optam": "300% BR",
+          "chambre_particuliere": "130 € (max 10 jours)"
         },
         "SOINS_COURANTS": {
-          "consultation_generaliste_optam": "200% BR",
-          "consultation_generaliste_non_optam": "180% BR"
+          "consultation_generaliste_optam": "350% BR",
+          "consultation_generaliste_non_optam": "250% BR"
         },
         "DENTAIRE": {
-          "soins_dentaires": "200% BR",
-          "orthodontie": "250% BR"
+          "soins_dentaires": "550% BR",
+          "orthodontie": "550% BR"
         },
         "OPTIQUE": {
-          "verres_complexes": "Deux verres très complexes + monture : 450 €"
+          "verres_complexes": "710 € / an"
         }
       },
       "source": {
-        "pdf_name": "entoria (7).pdf",
+        "pdf_name": "entoria (3).pdf",
         "page_range": "entire"
       }
     },
